@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--侧边栏-->
+<nav class="navbar-default navbar-side" role="navigation" th:fragment="adminSide">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="main-menu">
+
+            <li>
+                <a class="waves-effect waves-dark" th:href="@{/}"><i class="fa fa-dashboard"></i>
+                    首页</a>
+            </li>
+
+            <li class="">
+                <a th:href="@{/myAccount}" class="waves-effect waves-dark"><i class="fa fa-user"></i>
+                    管理员信息</a>
+            </li>
+
+            <li class="active">
+                <a class="active-menu waves-effect waves-dark" th:href="@{/addAdmin}"><i class="fa fa-plus"></i>
+                    添加管理员</a>
+            </li>
+
+            <li>
+                <a class="waves-effect waves-dark" th:href="@{/deleteAdmin}"><i class="fa fa-minus"></i>
+                    删除管理员</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+</body>
+</html>

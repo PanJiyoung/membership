@@ -36,7 +36,7 @@ public class MemberService {
         if (currentPage == null){
             currentPage = 1;
         }
-        Pageable pageable = new PageRequest(currentPage, 3, Sort.Direction.ASC, "id");
+        Pageable pageable = new PageRequest(currentPage, 20, Sort.Direction.ASC, "id");
         return memberDao.findAll(pageable);
     }
 
@@ -44,7 +44,7 @@ public class MemberService {
         if (currentPage == null){
             currentPage = 1;
         }
-        Pageable pageable = PageRequest.of(currentPage, 3, Sort.Direction.ASC, "id");
+        Pageable pageable = PageRequest.of(currentPage, 20, Sort.Direction.ASC, "id");
         return memberDao.findAllByMemberName(memberName, pageable);
     }
 
