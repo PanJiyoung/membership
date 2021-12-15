@@ -59,14 +59,14 @@ public class TestMemberDao {
      */
     @Test
     public void test03(){
-        Pageable pageable = new PageRequest(0, 3, Sort.Direction.ASC, "id");
+        Pageable pageable =  PageRequest.of(0, 3, Sort.Direction.ASC, "id");
         Page<Member> page = memberDao.findAll(pageable);
         System.out.println();
     }
 
     @Test
     public void test04(){
-        Pageable pageable = new PageRequest(0, 3, Sort.Direction.ASC, "id");
+        Pageable pageable =  PageRequest.of(0, 3, Sort.Direction.ASC, "id");
         System.out.println(memberDao.findAllByMemberName("123", pageable));
     }
 
@@ -82,7 +82,7 @@ public class TestMemberDao {
 
     @Test
     public void test07(){
-        Pageable pageable = new PageRequest(0, 1);
+        Pageable pageable =  PageRequest.of(0, 1);
         Page<Member> page = memberDao.findAll(pageable);
         PageImpl page1 = (PageImpl) page;
         System.out.println(page1.getContent().get(0));

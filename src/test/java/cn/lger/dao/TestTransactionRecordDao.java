@@ -53,14 +53,14 @@ public class TestTransactionRecordDao {
 
     @Test
     public void test03(){
-        Pageable pageable = new PageRequest(0, 3);
+        Pageable pageable =  PageRequest.of(0, 3);
         Page<TransactionRecord> page = transactionRecordDao.findAll(pageable);
         System.out.println(page);
     }
 
     @Test
     public void test04(){
-        Pageable pageable = new PageRequest(0, 3);
+        Pageable pageable =  PageRequest.of(0, 3);
         Page<TransactionRecord> page = transactionRecordDao.findAllByMemberId(pageable, "20171215143945448");
         System.out.println(page);
     }

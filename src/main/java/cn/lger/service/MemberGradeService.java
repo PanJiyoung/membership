@@ -31,7 +31,7 @@ public class MemberGradeService {
     }
 
     public Page<MemberGrade> findAll(Integer currentPage){
-        Pageable pageable = new PageRequest(currentPage, 5);
+        Pageable pageable = PageRequest.of(currentPage, 5);
         return memberGradeDao.findAll(pageable);
     }
 

@@ -88,7 +88,7 @@ public class CommodityController {
         if (currentPage == null || currentPage < 0){
             currentPage = 0;
         }
-        Pageable pageable = new PageRequest(currentPage, 3);
+        Pageable pageable = PageRequest.of(currentPage, 3);
         return commodityService.findAll(pageable);
     }
 
